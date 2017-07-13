@@ -31,10 +31,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 	padding: 0;
-	text-align: center;
 	position: relative;
 	margin: 0;
 	height: 100%;
@@ -43,6 +43,8 @@ body {
 ol, ul {
 	list-style: none;
 }
+
+
 blockquote, q {
 	quotes: none;
 }
@@ -59,7 +61,7 @@ a:hover, a:active {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}	
+}	*/
 
 html {
 	height: 100%;
@@ -146,10 +148,18 @@ p {
 	display: block;
 }
 
-.link {
+.link-inline {
 	width: 170px;
 	height: 90px;
 	display: inline-block;
+}
+
+.link {
+	width: 170px;
+	height: 90px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .photo {
@@ -157,6 +167,7 @@ p {
 	width: 48px;
 	height: 39px;
 	display: block;
+	margin-top: 30px;
 }
 
 .amenities {
@@ -282,7 +293,7 @@ header {
 
 .locationContainer {
 	display: block;
-	margin: 0 auto;
+	text-align: center;
 	margin-top: 35px;
 }
 
@@ -315,4 +326,19 @@ header {
 
 .attractionDetails tr {
 	width: 500px;
+}
+
+.hiddenPhoto {
+	display: none;
+}
+
+#lightgallery {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.img-responsive {
+	width: 200px;
+	height: 133px;
+	margin-right: 5px;
 }

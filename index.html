@@ -2,26 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
 	<title>Golden Porto Cardosas - Booking</title>
-	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<link href="onepage-scroll.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<script>
-		$(document).ready(function(){
-			$(".main").onepage_scroll({
-				sectionContainer: "section",
-				responsiveFallback: 600,
-				loop: true
-			});
-		});
-
-		function scrollTo(i) {
-			$(".main").moveTo(i);	
-		}
-
-	</script>
+	
 </head>
 <body>
 	<img class="booknow" src="booknow.jpg">
@@ -39,19 +24,19 @@
 					<h2>Book your stay at Golden Porto Cardosas city center apartment.</h2>
 					<h2>Talk to us! We’re happy to help you!</h2>
 					<div class="links">
-						<a onclick="scrollTo(2)" class="link" href="#">
+						<a onclick="scrollTo(2)" class="link-inline" href="#">
 							<img class="photo" src="photoicon.png">
 							<p class="linkText">Photos</p>
 						</a>
-						<a onclick="scrollTo(3)" class="link" href="#">
+						<a onclick="scrollTo(3)" class="link-inline" href="#">
 							<img class="amenities" src="hearticon.png">
 							<p class="linkText">Amenities</p>
 						</a>
-						<a onclick="scrollTo(4)" class="link" href="#">
+						<a onclick="scrollTo(4)" class="link-inline" href="#">
 							<img class="map" src="mapicon.png">
 							<p class="linkText">Location</p>
 						</a>
-						<a onclick="scrollTo(5)" class="link" href="#">
+						<a onclick="scrollTo(5)" class="link-inline" href="#">
 							<img class="map" src="mapicon.png">
 							<p class="linkText">Availability</p>
 						</a>
@@ -68,6 +53,26 @@
 						<img class="photo" src="photoicon.png">
 						<p class="linkText">Photos</p>
 					</a>
+					<div id="lightgallery">	
+					    <a href="img/photo1.jpg">
+					        <img class="img-responsive" src="img/photo1.jpg">
+					    </a>
+					    <a href="img/photo2.jpg">
+					        <img class="img-responsive" src="img/photo2.jpg">
+					    </a>
+					    <a href="img/photo3.jpg">
+					        <img class="img-responsive" src="img/photo3.jpg">
+					    </a>
+					    <a href="img/photo3.jpg">
+					        <img class="img-responsive" src="img/photo3.jpg">
+					    </a>
+					    <a href="img/photo3.jpg">
+					        <img class="img-responsive" src="img/photo3.jpg">
+					    </a>
+					    <a href="img/photo4.jpg">
+					     	<img class="hiddenPhoto" src="img/photo4.jpg">
+					     </a>
+					</div>
 				</div>
 			</section>
 			<section class="page3">
@@ -123,7 +128,7 @@
 			<script>
 			      function initMap() {
 			      	var location = {lat: 41.145342, lng: -8.611566};
-			    	var map = new google.maps.Map(document.getElementById('map'), {
+			    	var map = new google.maps.Map(document.getElementById("map"), {
 			          center: location,
 			          zoom: 17
 			        });
@@ -135,9 +140,9 @@
 
 
 			        var infowindow = new google.maps.InfoWindow({
-          				content: 'Golden Porto Cardosas Apartment'
+          				content: "Golden Porto Cardosas Apartment"
         			});
-			        marker.addListener('click', function() {
+			        marker.addListener("click", function() {
           				infowindow.open(map, marker);
         			});
 			      }
@@ -201,5 +206,26 @@
 			</section>
 		</div>
 	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+	<script type="text/javascript" src="lightgallery.min.js"></script>
+	<script type="text/javascript" src="lg-thumbnail.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$(".main").onepage_scroll({
+				sectionContainer: "section",
+				responsiveFallback: 600,
+				loop: true
+			});
+		});
+
+		function scrollTo(i) {
+			$(".main").moveTo(i);	
+		}
+
+		lightGallery(document.getElementById('lightgallery'), {
+    		thumbnail:true
+		}); 
+	</script>
 </body>
 </html>
