@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+	<title>Golden Porto Cardosas - Booking</title>
+	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<script>
+		$(document).ready(function(){
+			$(".main").onepage_scroll({
+				sectionContainer: "section",
+				responsiveFallback: 600,
+				loop: true
+			});
+		});
+
+		function scrollTo(i) {
+			$(".main").moveTo(i);	
+		}
+
+	</script>
+</head>
+<body>
+	<img class="booknow" src="booknow.jpg">
+	<p class="booknow">Talk to us</p>
+	<div class="wrapper">
+		<div class="main">
+			<section class="page1">
+				<div class="page_container">
+					<div class="triangle"></div>
+					<div class="triangle2"></div>
+					<div class="triangle3"></div>
+					<div class="triangle4"></div>
+					<h1>Golden Porto Cardosas</h1>
+					<h2>Enjoy Porto to the fullest!</h2> 
+					<h2>Book your stay at Golden Porto Cardosas city center apartment.</h2>
+					<h2>Talk to us! We’re happy to help you!</h2>
+					<div class="links">
+						<a onclick="scrollTo(2)" class="link" href="#">
+							<img class="photo" src="photoicon.png">
+							<p class="linkText">Photos</p>
+						</a>
+						<a onclick="scrollTo(3)" class="link" href="#">
+							<img class="amenities" src="hearticon.png">
+							<p class="linkText">Amenities</p>
+						</a>
+						<a onclick="scrollTo(4)" class="link" href="#">
+							<img class="map" src="mapicon.png">
+							<p class="linkText">Location</p>
+						</a>
+						<a onclick="scrollTo(5)" class="link" href="#">
+							<img class="map" src="mapicon.png">
+							<p class="linkText">Availability</p>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="page2">
+				<div class="page_container">
+					<div class="triangle"></div>
+					<div class="triangle2"></div>
+					<div class="triangle3"></div>
+					<div class="triangle4"></div>
+					<a onclick="scrollTo(2)" class="link" href="#">
+						<img class="photo" src="photoicon.png">
+						<p class="linkText">Photos</p>
+					</a>
+				</div>
+			</section>
+			<section class="page3">
+				<div class="page_container">
+					<div class="triangle"></div>
+					<div class="triangle2"></div>
+					<div class="triangle3"></div>
+					<div class="triangle4"></div>
+					<a onclick="scrollTo(2)" class="link" href="#">
+						<img class="amenities page3" src="hearticon.png">
+						<p class="linkText">Amenities</p>
+					</a>
+					<table class="amenitiesDetails">
+						<tr width="20%">
+							<td width="100px">2 people</td>
+							<td>Elevator</td> 
+							<td>Kitchen</td>
+							<td>Coffe Machine</td>
+							<td>Balcony</td>
+						</tr>
+						<tr width="20%">
+							<td>Extra person available</td>
+							<td>Wireless Internet</td> 
+							<td>Microwave</td>
+							<td>Dishwasher</td>
+							<td>Private Condo</td>
+						</tr>
+						<tr width="20%">
+							<td>1 WC</td>
+							<td>Wheelchair Accessible</td> 
+							<td>Oven</td>
+							<td>Washing Machine</td>
+							<td>Survaillance</td>
+						</tr>
+						<tr width="20%">
+							<td>Chekin 15pm</td>
+							<td>Central Heating System</td> 
+							<td>Fridge</td>
+							<td>Iron</td>
+							<td>First Aid Kit</td>
+						</tr>
+						<tr width="20%">
+							<td>Checkout 11am</td>
+							<td>Bed and WC linens</td> 
+							<td>Kettle</td>
+							<td>TV</td>
+							<td>Fan</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section class="page4">
+			<script>
+			      function initMap() {
+			      	var location = {lat: 41.145342, lng: -8.611566};
+			    	var map = new google.maps.Map(document.getElementById('map'), {
+			          center: location,
+			          zoom: 17
+			        });
+
+			        var marker = new google.maps.Marker({
+			          position: location,
+			          map: map
+			        });
+
+
+			        var infowindow = new google.maps.InfoWindow({
+          				content: 'Golden Porto Cardosas Apartment'
+        			});
+			        marker.addListener('click', function() {
+          				infowindow.open(map, marker);
+        			});
+			      }
+    		</script>
+    		<script async defer
+   			 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlHP1nJ0OIRxRshT1hnd_670rSOe3FLsg&callback=initMap">
+   			 </script>
+				<div class="page_container">
+					<div class="triangle"></div>
+					<div class="triangle2"></div>
+					<div class="triangle3"></div>
+					<div class="triangle4"></div>
+					<a onclick="scrollTo(4)" class="link" href="#">
+						<img class="map page4" src="mapicon.png">
+						<p class="linkText">Location</p>
+					</a>
+					<div class="locationContainer">
+						<div class="attractions">					
+							<table class="attractionDetails">
+								<tr>
+									<td>Aliados Avenue</td>
+									<td>Flores Street</td>
+								</tr>
+								<tr>
+									<td>Hard Rock Cafe Porto</td>
+									<td>Grocery Market</td>
+								</tr>
+								<tr>
+									<td>São Bento's Subway</td>
+									<td>Train Station</td>
+								</tr>
+								<tr>
+									<td>Ribeira Dock</td>
+									<td>Pharmacy</td>
+								</tr>
+								<tr>
+									<td>Galerias Street</td>
+									<td>Bars and Restaurants</td>
+								</tr>
+								<tr>
+									<td>Sta. Catarina Street</td>
+									<td>Clérigos Tower</td>
+								</tr>
+							</table>
+						</div>
+						<div id="map"></div>
+					</div>
+				</div>
+			</section>
+			<section class="page5">
+				<div class="page_container">
+					<div class="triangle"></div>
+					<div class="triangle2"></div>
+					<div class="triangle3"></div>
+					<div class="triangle4"></div>
+					<a onclick="scrollTo(5)" class="link" href="#">
+						<img class="map page5" src="mapicon.png">
+						<p class="linkText">Availability</p>
+					</a>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
